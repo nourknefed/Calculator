@@ -21,7 +21,8 @@ export class Calculator {
   }
 
   displayNumber(number) {
-    if (number === '.' && this.current_operation.includes('.')) return
+    if (number == "0" && this.current_operation.includes('0')) return;
+    if (number === '.' && this.current_operation.includes('.')) return;
     this.current_operation = this.current_operation.toString() + number.toString();
   }
 
@@ -30,7 +31,6 @@ export class Calculator {
     if (this.previous_operation !== "") {
       this.operate()
     }
-
     this.operation = operation;
     this.previous_operation = this.current_operation;
     this.current_operation = "";
@@ -60,7 +60,7 @@ export class Calculator {
       default: return
     }
     //this.current_operation = result;
-    this.current_operation = +(Math.round(result + "e+3") + "e-3");
+    this.current_operation = +(Math.round(result + "e+6") + "e-6");
     this.operation = undefined;
     this.previous_operation = "";
   }
