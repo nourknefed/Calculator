@@ -7,9 +7,7 @@ const clearBtn = document.getElementById('clear');
 const deleteBtn = document.getElementById('del');
 const perviousOperation_text = document.getElementById('pervious-operation');
 const currentOperation_text = document.getElementById('current-operation');
-
 const calculator = new Calculator(perviousOperation_text, currentOperation_text)
-
 
 numberBtns.forEach(btn => {
   btn.addEventListener('click', () => {
