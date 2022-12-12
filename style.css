@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url(./Fonts/Roboto-Black.ttf)
+}
+@font-face {
+  font-family: 'Roboto-thin';
+  src: url(./Fonts/Roboto-Thin.ttf)
+}
+
+*, *::after, *::before{
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight:  normal;
+  
+}
+body{
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, rgb(0, 12, 53), rgb(45, 14, 52));
+}
+.calc-grid{
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4,100px);
+  grid-template-rows: minmax(120px,auto) repeat(5,100px);
+}
+.calc-grid > button{
+  background-color: rgb(194, 194, 194);
+  font-size: 2rem;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid white;
+  box-shadow: 5px 5px 20px 5px rgba(0,12,53, 0.75);
+}
+.calc-grid button:hover{
+   background-color: rgb(250, 250, 250);
+}
+.flex-two{
+  grid-column: span 2;
+}
+.output{
+  grid-column: 1/-1;
+  background-color: rgba(1, 0, 6, 0.75);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.previous-operation{
+  font-family: 'Roboto-thin', sans-serif;
+   color: rgba(255,255,255, 0.8);
+
+}
+.current-result{
+  font-size: 2rem;
+  color: rgba(255,255,255);
+
+}
